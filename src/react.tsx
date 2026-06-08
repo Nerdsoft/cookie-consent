@@ -41,6 +41,7 @@ export function useCookieConsent(
 
   useEffect(() => {
     if (!isVisible) return;
+    if (status !== null) return;
 
     const cleanupFns: (() => void)[] = [];
     const { autoAcceptMs, autoAcceptOnScrollPx } = config.behavior;
@@ -59,7 +60,7 @@ export function useCookieConsent(
     }
 
     return () => cleanupFns.forEach((fn) => fn());
-  }, [isVisible, accept, config.behavior]);
+  }, [isVisible, status, accept, config.behavior]);
 
   return { status, isVisible, accept, decline, show, config };
 }

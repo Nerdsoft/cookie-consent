@@ -1,6 +1,6 @@
 {
   "name": "@nerdsoft/cookie-consent",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lightweight, configurable cookie consent library for React and vanilla JS — supports CCPA, GDPR, and custom behavior.",
   "license": "MIT",
   "type": "module",
